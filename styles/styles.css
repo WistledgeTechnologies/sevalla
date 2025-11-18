@@ -1,0 +1,119 @@
+:root {
+    --bg: #f5f5f5;
+    --pr-bg: rgb(250, 120, 20);
+    --text: #030712;
+}
+
+@media (prefers-color-scheme: dark){
+    :root {
+    --bg: #030712;
+    --pr-bg: rgb(250, 115, 20);
+    --text: #f5f5f5;
+   }
+}
+
+html, body {
+    background-color: var(--bg);
+    line-height: 1.5;
+    font-family: "Inter", sans-serif;
+}
+
+.pr-banner-ctn{
+    background-color: var(--pr-bg);
+    color: var(--text);
+    padding: .82rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .pr-ctn {
+        --text: #fff;
+        color: var(--text);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 16px;
+        font-weight: 600;
+
+        i{
+           font-size: 21px;
+        }
+
+        span {
+            font-weight: 700;
+        }
+    }
+}
+
+header {
+    width: 100%;
+    /* background-color: red; this is just to make sure that i get the accurate measurement of some containers */
+    padding: 7px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 87%;
+    background-color: blue;
+    margin: auto;
+
+    .logo-ctn {
+        width: 130px;
+        height: auto;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .nav-links{
+        background-color: green;
+        display: flex;
+        align-items: center;
+        width: 40% ;
+        justify-content: space-between;
+
+        .nav-links-2{
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+        }
+    }
+
+    .menu-btn {
+        
+        background: transparent;
+    }
+
+    .cta-btn {
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        width: 22%;
+        background-color: aqua;
+
+        & > li {
+           padding: .375rem .80rem;
+           background-color: #ffffff;
+           border: 1px solid #d1d5db;
+           border-radius: .5rem;
+           height: 40px;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           font-size: 0.835rem;
+           color: var(--text);
+           font-weight: 700;
+        }
+
+        & li:nth-child(2){
+            background-color: var(--pr-bg);
+            --text: #fff;
+            color: var(--text);
+        }
+    }
+    
+}
+
