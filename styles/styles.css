@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 html, body{
    line-height: 1.5;
    font-weight: 400;
@@ -78,7 +80,7 @@ html, body{
     }
 
     .nav-list {
-      width: 43%;
+      width: 40%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -160,18 +162,16 @@ html, body{
       animation: slideIn 0.4s ease-in-out;
     }
 
+    /* @keyframes animation for dropdown menu */
     @keyframes slideIn {
       0% {
         transform: translateX(-15px);
-        /* opacity: 0; */
       }
       60% {
         transform: translateX(2px);
-        /* opacity: 0.8; */
       }
       100% {
         transform: translateX(0);
-        /* opacity: 1; */
       }
     }
     
@@ -213,7 +213,7 @@ html, body{
       justify-content: center;
       flex-direction: column;
       text-align: center;
-      /* background-color: red; */
+      /* background-color: red; this is just for basic styling and layout accuracy*/
       padding-top: 55px;
     }
 
@@ -397,3 +397,25 @@ html, body{
         color: #fafafa;
       }
     }
+
+.mobile-view-404 {
+  position: absolute;
+  display: none;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1400px) {
+  .mobile-view-404 {
+    inset: 0;
+    position: absolute;
+    z-index: 999;
+    background-color: #030712;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
