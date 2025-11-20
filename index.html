@@ -5,64 +5,127 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Sevalla is the home to your web projects. Host and manage your applications, databases, and static sites in a single, intuitive platform." />
   <meta name="keywords" content="PaaS, Application hosting, Database hosting, Static site hosting, Sevalla, Kinsta, Cloudflare" />
-  <link rel="icon" href="./assests/icons/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./assests/icons/boxicons/free/fonts/basic/boxicons.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
   <link rel="stylesheet" href="./styles/styles.css">
-  <link rel="stylesheet" href="./styles/reset.css">
   <link rel="stylesheet" href="./styles/inter-fonts-config.css">
+  <link rel="stylesheet" href="./styles/reset.css">
   <title>Sevalla® - Cloud Application Platform. Deploy Apps in Minutes.</title>
 </head>
+
 <body>
-   <div class="pr-banner-ctn">
-      <div class="pr-ctn">
-          <i class="bx bx-gift"></i>
-          <p>Try Sevalla today and get <span>$50</span> free credit</p>
+  <div class="promo-banner-ctn">
+    <div class="banner-ctn">
+      <i class="bx bx-gift"></i>
+      <p>Try Sevalla today and get <span>$50</span> free credit</p>
+    </div>
+  </div>
+
+  <header>
+    <nav>
+      <div class="logo-ctn">
+        <img src="./assets/icons/sevalla.svg" alt="Sevalla® logo" />
       </div>
-   </div>
-   <header>
-     <nav>
-         <div class="logo-ctn">
-            <img src="./assests/icons/sevalla.svg" alt="sevalla logo">
-         </div>
-        <!-- // chnaged from buttons to an anchor tag for simplicity-->
-         <ul class="nav-links">
-            <li>
-              <a class="menu-btn" id="toggle-menu" aria-expanded="false">
-                Products
-              </a>
-              <!-- <ul>
-                 <li><a href="">Aplication Hosting</a></li>
-                 <li><a href="#">Object storage</a></li>
-                 <li><a href="">Database hosting</a></li>
-                 <li><a href="">Static site hosting</a></li>
-              </ul> -->
-            </li>
 
-            <li>
-              <a class="menu-btn" id="toggle-menu" aria-expanded="false">
-                Resources
-              </a>
-              <!-- <ul>
-                 <li><a href="">Aplication Hosting</a></li>
-                 <li><a href="#">Object storage</a></li>
-                 <li><a href="">Database hosting</a></li>
-                 <li><a href="">Static site hosting</a></li>
-              </ul> -->
-            </li>
+      <ul class="nav-list">
+        <li class="product-list" data-open="false">
+          <button class="dp-btn product-btn" data-state="closed" aria-expanded="false">
+            Products <i class="bx bx-chevron-down"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">API Docs</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Changelog</a></li>
+            <li><a href="#">Status</a></li>
+          </ul>
+        </li>
 
-             <ul class="nav-links-2">
-                <li><a href="./pages/About/">Pricing</a></li>
-                <li><a href="#">Docs</a></li>
-                <li><a href="#">Contact</a></li>
-             </ul>
-         </ul>
+        <li class="product-list" data-open="false">
 
-         <ul class="cta-btn">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">$50 credit</a></li>
-         </ul>
-     </nav>
-   </header>
+          <button class="dp-btn" data-state="closed" aria-expanded="false">
+            Resources <i class="bx bx-chevron-down"></i>
+          </button>
+
+          <ul class="dropdown-menu drop2">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Guides</a></li>
+            <li><a href="#">Guides</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+
+        </li>
+
+        <ul class="nv-ctn-ctn">
+          <li><a href="#" class="dp-btn">Pricing</a></li>
+          <li><a href="#" class="dp-btn">Docs</a></li>
+          <li><a href="#" class="dp-btn">Contact</a></li>
+        </ul>
+        
+      </ul>
+
+      <ul class="nv-cta-btn">
+        <li><a href="#" class="nv-btn">Dashboard</a></li>
+        <li><a href="#" class="nv-btn">$50 Credit</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+            <h1 class="hero-title">Deploy your app
+                <br> before your         coffee gets cold</h1>
+            <p class="hero-sub">
+              <span>Sevalla</span> is the home to your web projects. <br> Deploy anything. Forget complexity. PaaS made easy.
+            </p>
+            <div class="hero-buttons">
+              <button class="btn btn-primary">$50 credit</button>
+              <button class="btn btn-outline">Pricing</button>
+            </div>
+            <div class="container">
+              <section aria-label="Screenshot images of Sevalla">
+                <div class="outer-box">
+
+                  <div class="inner-box">
+                    <div class="screenshot" style="opacity: 1;">
+                      <img src="./assets/images/sevalla-app-screenshot-2.433a0931.webp" alt="Sevalla  dashboard screenshot" loading="lazy">
+                    </div>
+                    <div class="screenshot" style="opacity: 0;">
+                      <img src="./assets/images/sevalla-app-screenshot-4.8d4856eb.webp" alt="Sevalla           app screenshot" loading="lazy">
+                    </div>
+                  </div>
+                </div>
+              </section>
+            <div class="gradient" aria-hidden="true"></div>
+          </div>
+        </section>
+        <section id="about">
+
+        </section>
+  </main>
+  
+  <footer>
+
+  </footer>
+
+   <script>
+     const btn = document.getElementById('toggle-btn');
+     const icon = document.getElementById('menu-icon');
+     const menu = document.getElementById('menu');
+
+     btn.addEventListener('click', () => {
+      menu.classList.toggle('open');
+
+      if(menu.classList.contains('open')){
+        icon.classList.remove('bx-menu');
+        icon.classList.add('bx-x')
+      } else {
+        icon.classList.remove('bx-x');
+        icon.classList.add('bx-menu')
+      }
+     })
+  </script>
 </body>
 </html>

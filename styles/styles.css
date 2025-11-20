@@ -1,119 +1,399 @@
-:root {
-    --bg: #f5f5f5;
-    --pr-bg: rgb(250, 120, 20);
-    --text: #030712;
+*, *::after, *::before{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark){
-    :root {
-    --bg: #030712;
-    --pr-bg: rgb(250, 115, 20);
-    --text: #f5f5f5;
-   }
+html, body{
+   line-height: 1.5;
+   font-weight: 400;
+   background-color: #ffffff;
+   font-family: "Inter", san-serif;
+   font-optical-sizing: auto;
 }
-
-html, body {
-    background-color: var(--bg);
-    line-height: 1.5;
-    font-family: "Inter", sans-serif;
-}
-
-.pr-banner-ctn{
-    background-color: var(--pr-bg);
-    color: var(--text);
-    padding: .82rem 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .pr-ctn {
-        --text: #fff;
-        color: var(--text);
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 16px;
-        font-weight: 600;
-
-        i{
-           font-size: 21px;
-        }
-
-        span {
-            font-weight: 700;
-        }
-    }
-}
-
-header {
+/* 
+.banner-promo-ctn{
+    background-color: #e95f03;
+    background-color: #f97316 !important;
     width: 100%;
-    /* background-color: red; this is just to make sure that i get the accurate measurement of some containers */
-    padding: 7px;
-}
-
-nav{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 87%;
-    background-color: blue;
-    margin: auto;
+    justify-content: center;
+    padding: 10px;
+    color: white;
+} */
 
-    .logo-ctn {
-        width: 130px;
-        height: auto;
+    ul { list-style: none; }
 
-        img{
-            width: 100%;
-        }
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    .nav-links{
-        background-color: green;
-        display: flex;
-        align-items: center;
-        width: 40% ;
-        justify-content: space-between;
-
-        .nav-links-2{
-            display: flex;
-            justify-content: space-between;
-            gap: 18px;
-        }
+    /* ---------- PROMO BANNER ---------- */
+    .promo-banner-ctn {
+      background-color: #e95f03;
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      height: 9vh;
+    }
+ 
+    .banner-ctn {
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      letter-spacing: 0;
     }
 
-    .menu-btn {
-        
-        background: transparent;
+    .banner-ctn span {
+      font-weight: bold;
     }
 
-    .cta-btn {
-        display: flex;
-        align-items: center;
-        justify-content:space-between;
-        width: 22%;
-        background-color: aqua;
+    .bx {
+      font-size: 18px;
+      font-weight: 700;
+    }
 
-        & > li {
-           padding: .375rem .80rem;
-           background-color: #ffffff;
-           border: 1px solid #d1d5db;
-           border-radius: .5rem;
-           height: 40px;
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           font-size: 0.835rem;
-           color: var(--text);
-           font-weight: 700;
-        }
+    header {
+      display: flex;
+      justify-content: center;
+      padding: 7px;
+      width: 100%;
+    }
 
-        & li:nth-child(2){
-            background-color: var(--pr-bg);
-            --text: #fff;
-            color: var(--text);
-        }
+    nav {
+      width: 86%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-ctn img {
+      width: 130px;
+      height: auto;
+    }
+
+    .nav-list {
+      width: 43%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nv-cta-btn {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* ---------- DROPDOWN BUTTON ---------- */
+    .dp-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+      padding: 8px 12px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1;
+      border-radius: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color 150ms ease;
+      color: #343439;
+    }
+
+    .dp-btn:hover {
+      color: #ea580c;
+    }
+
+    .dp-btn i {
+      font-size: 18px;
+      transition: transform 0.25s ease-in;
+    }
+
+    /* ---------- DROPDOWN MENU ---------- */
+    .dropdown-menu {
+      position: absolute;
+      margin-top: 8px;
+      background-color: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      display: none;
+      flex-direction: column;
+      padding: 20px 0;
+      min-width: 160px;
+      width: 500px;
+      z-index: 50;
+    }
+
+    .drop2{
+      left: -150px;
+      width: 600px;
+      position: absolute;
+    }
+
+    .dropdown-menu li a {
+      display: block;
+      padding: 8px 16px;
+      font-size: 14px;
+      color: #111827;
+      transition: background-color 0.15s ease;
+    }
+
+    .dropdown-menu li a:hover {
+      background-color: #f9fafb;
+      color: #ea580c;
+    }
+
+    .product-list {
+      position: relative;
+    }
+
+    .product-list:hover .dropdown-menu {
+      display: flex;
+      animation: slideIn 0.4s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      0% {
+        transform: translateX(-15px);
+        /* opacity: 0; */
+      }
+      60% {
+        transform: translateX(2px);
+        /* opacity: 0.8; */
+      }
+      100% {
+        transform: translateX(0);
+        /* opacity: 1; */
+      }
     }
     
-}
+    .product-list:hover .dp-btn i {
+      color: #ea580c;
+      transform: rotate(-180deg);
+    }
+    
+    .nv-ctn-ctn{
+      display:flex;
+    }
 
+    /* ---------- CTA BUTTONS ---------- */
+    .nv-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      padding: 0.375rem 0.75rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 0.5rem;
+      border: 1px solid #d1d5db;
+      color: #111827;
+      background-color: #ffffff;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      transition: all 100ms ease-in-out;
+    }
+
+    .nv-btn:hover {
+      background-color: #f9fafb;
+    }
+
+    /* ---------- HERO SECTION ---------- */
+    #hero{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      /* background-color: red; */
+      padding-top: 55px;
+    }
+
+    #hero h1 {
+      font-family: "funnelDisplay";
+      font-size: clamp(4.5rem, 4.8vw, 6rem);
+      color:var(--text) ;
+      display: inline-block;
+      line-height: 1;
+      font-weight: 300 !important;
+      max-width: 900px;
+      letter-spacing: -.05em;
+      margin: 0 auto 20px;
+      background-clip: text;
+      text-align: center;
+      padding: .5rem;
+      display: block;
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: #4b5563;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+
+    .hero-sub span {
+      background-color: #ffedd5;
+      color: #ea580c;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      border: 1px solid #d1d5db;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #ea580c;
+      color: #fff;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: #c2410c;
+    }
+
+    .btn-outline {
+      background: #fff;
+      color: #111827;
+    }
+
+    .btn-outline:hover {
+      background: #f9fafb;
+    }
+
+    /* About  */
+
+    #about{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .container {
+      position: relative;
+      margin: 5rem auto 0;
+      width: 40rem;
+      max-width: 90%;
+      animation: slideUpFade 1.4s ease;
+    }
+
+    @keyframes slideUpFade {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    section {
+      display: flow-root;
+    }
+
+    .outer-box {
+      background-color: rgba(248, 250, 252, 0.4);
+      padding: 0.5rem;
+      border-radius: 1rem;
+      box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.5);
+    }
+
+    .inner-box {
+      background-color: #fff;
+      display: flex;
+      overflow-y: auto;
+      border-radius: 0.75rem;
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.05);
+    }
+
+    .screenshot {
+      overflow: hidden;
+      border-radius: 0.75rem;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .screenshot img {
+      display: block;
+      width: 100%;
+      height: auto;
+      color: transparent;
+    }
+
+    .gradient {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -5rem;
+      height: 50%;
+      background: linear-gradient(to top, white, white, transparent);
+      pointer-events: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .outer-box {
+        background-color: rgba(17, 24, 39, 0.7);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+      }
+
+      .inner-box {
+        background-color: #0f172a;
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
+      }
+
+      .gradient {
+        background: linear-gradient(to top, #0f172a, #0f172a, transparent);
+      }
+    }
+
+    /* ---------- DARK MODE ---------- */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #030712;
+        color: #fafafa;
+      }
+
+      .dropdown-menu {
+        background-color: #111827;
+        border-color: #1f2937;
+      }
+
+      .dropdown-menu li a {
+        color: #fafafa;
+      }
+
+      .dropdown-menu li a:hover {
+        background-color: #1f2937;
+        color: #f97316;
+      }
+
+      .nv-btn {
+        background-color: #0a0a0a;
+        border-color: #1f2937;
+        color: #fafafa;
+      }
+    }

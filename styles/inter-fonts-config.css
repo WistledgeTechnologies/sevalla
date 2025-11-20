@@ -1,3 +1,12 @@
+/* =======-== Body Font configuration =========  */
+
+@font-face {
+    font-family: "Inter";
+    src: url('../assests/fonts/Inter/static/Inter_18pt-Regular.ttf')format('truetype');
+    font-weight:300 ;
+    font-style: normal;
+    font-display: swap;
+}
 
 @font-face {
     font-family: "Inter";
@@ -13,4 +22,20 @@
     font-weight:700 ;
     font-style: normal;
     font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url('../assests/fonts/Inter/static/Inter_24pt-Bold.ttf')format('truetype');
+    font-weight:800 ;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*  Hero font - funnelDisplay */
+@font-face {
+  font-family: 'funnelDisplay';
+  src: url('../assests/fonts/Funnel_Display/FunnelDisplay-VariableFont_wght.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
 }
