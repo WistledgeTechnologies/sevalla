@@ -102,7 +102,7 @@ header {
 }
 
 nav {
-  width: 86%;
+  width: 87%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -216,16 +216,16 @@ nav {
   }
 }
     
-    .product-list:hover .dp-btn i {
-      color: #ea580c;
-      transform: rotate(-180deg);
-    }
-    
-    .nv-ctn-ctn{
-      display:flex;
-    }
+.product-list:hover .dp-btn i {
+  color: #ea580c;
+  transform: rotate(-180deg);
+}
 
-    /* ---------- CTA BUTTONS ---------- */
+.nv-ctn-ctn{
+  display:flex;
+}
+
+/* ---------- CTA BUTTONS ---------- */
 
 .nv-btn {
   display: inline-flex;
@@ -372,43 +372,43 @@ section {
   display: flow-root;
 }
 
-    .outer-box {
-      background-color: rgba(248, 250, 252, 0.4);
-      padding: 0.5rem;
-      border-radius: 1rem;
-      box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.5);
-    }
+.outer-box {
+  background-color: rgba(248, 250, 252, 0.4);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.5);
+}
 
-    .inner-box {
-      background-color: #fff;
-      display: flex;
-      overflow-y: auto;
-      border-radius: 0.75rem;
-      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.05);
-    }
+.inner-box {
+  background-color: #fff;
+  display: flex;
+  overflow-y: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.05);
+}
 
-    .screenshot {
-      overflow: hidden;
-      border-radius: 0.75rem;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    }
+.screenshot {
+  overflow: hidden;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
 
-    .screenshot img {
-      display: block;
-      width: 100%;
-      height: auto;
-      color: transparent;
-    }
+.screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: transparent;
+}
 
-    .gradient {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -5rem;
-      height: 50%;
-      background: linear-gradient(to top, white, white, transparent);
-      pointer-events: none;
-    }
+.gradient {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5rem;
+  height: 50%;
+  background: linear-gradient(to top, white, white, transparent);
+  pointer-events: none;
+}
 
     @media (prefers-color-scheme: dark) {
       .outer-box {
