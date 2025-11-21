@@ -107,9 +107,10 @@ nav {
   align-items: center;
   justify-content: space-between;
 
-  .logo-ctn img {
+  .logo-ctn{
     width: 130px;
     height: auto;
+    color: var(--color-text);
   }
 
   .nav-list {
