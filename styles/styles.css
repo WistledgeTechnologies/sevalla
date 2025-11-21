@@ -406,7 +406,7 @@ html, body{
   justify-content: center;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1000px) {
   .mobile-view-404 {
     inset: 0;
     position: absolute;
